@@ -119,6 +119,25 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 .mgrid img{width:100%;display:block;aspect-ratio:2/1;object-fit:cover}
 .mgrid figcaption{padding:12px 16px;font:700 19px var(--head)}
 .poster .rt{color:var(--amber);font-weight:500;margin:2px 0 8px}.poster .st{margin-top:10px;font-size:14px}.poster .mo{margin-top:10px;font-style:italic;color:var(--text);font-size:15px}
+body{overflow-x:hidden}
+.band{position:relative;isolation:isolate}
+.band::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw;
+ background:linear-gradient(var(--bg),#070a1c66 30%,#070a1c66 70%,var(--bg)),var(--bgi) center/cover}
+.fx{min-height:240px;display:flex;flex-direction:column;justify-content:flex-end;border-left:0;
+ background:linear-gradient(0deg,#070a1cf5 18%,#070a1c44 75%),var(--bgi) center/cover}
+.fx p{color:#c3cff0}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;margin-bottom:46px}
+.gal figure{margin:0;background:var(--panel);border:1px solid var(--line)}
+.gal figure:first-child.big{grid-column:1/-1}
+.gal img{width:100%;display:block;cursor:zoom-in}
+.gal figcaption{padding:10px 14px;color:var(--muted);font-size:15px}
+h3.gh{font:700 24px var(--head);margin:10px 0 16px}
+.poster{border-top:3px solid var(--c)}.poster h3{color:var(--c)}
+dialog{background:none;border:0;padding:0;max-width:96vw;max-height:96vh}
+dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;display:block;cursor:zoom-out}
+.topbg{animation:slow 40s ease-in-out infinite alternate;background-size:115%!important}
+@keyframes slow{to{background-position:center 30%}}
+@media (prefers-reduced-motion:reduce){.topbg{animation:none}}
 </style>
 </head>
 <body>
@@ -129,6 +148,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <a class="logo" href="#">EMBERS <span>OF QUINARY</span></a>
     <ul>
       <li><a href="#spil">Om spillet</a></li>
+      <li><a href="#skaerm">Skærmbilleder</a></li>
       <li><a href="#imperier">Imperier</a></li>
       <li><a href="#galleri">Missioner</a></li>
             <li><a href="#download">Download</a></li>
@@ -154,22 +174,39 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <h2>Det kan du i Embers of Quinary</h2>
     <p class="sub">En kampagne med historie, kampe i store baner og et skib, du selv bygger videre på.</p>
     <div class="grid">
-      <div class="feat"><h3>Kampagne med historie</h3><p>Scriptede missioner, nødsignaler, baghold og meget lore. Nullborn er den fælles fjende, og de bliver farligere, jo længere du kommer.</p></div>
-      <div class="feat"><h3>Opgrader dit skib</h3><p>Vælg mellem forskellige skibe med egne roller og våben, og lås flere op undervejs.</p></div>
-      <div class="feat"><h3>Udforsk og tjen penge</h3><p>Rejs mellem sektorer via jumpgates, mine asteroider og lav missioner på stationerne.</p></div>
-      <div class="feat"><h3>Spil alene</h3><p>Ingen konto og ingen internetforbindelse. Du kan gemme på din hjemmestation og fortsætte senere.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_kamp.webp)"><h3>Kampagne med historie</h3><p>Scriptede missioner, nødsignaler og baghold. Nullborn er den fælles fjende, og de bliver farligere, jo længere du kommer.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_opgrader.webp)"><h3>Opgrader dit skib</h3><p>Vælg mellem skibe med egne roller og våben, og lås flere op undervejs.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_udforsk.webp)"><h3>Udforsk og tjen penge</h3><p>Rejs mellem sektorer via jumpgates, mine asteroider og tag missioner på stationerne.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/pulsar.webp)"><h3>Spil alene</h3><p>Ingen konto og ingen internetforbindelse. Gem på din hjemmestation og fortsæt senere.</p></div>
     </div>
   </section>
 
-  <section id="imperier">
+  <section id="skaerm">
+    <h2>Fra spillet</h2>
+    <p class="sub">Rigtige skærmbilleder. Klik på et billede for at se det stort.</p>
+    <div class="gal">
+      <figure class="zoom big"><img src="billeder/skaerm_hud.webp" alt="Nerathi-hjemmesektor med radar og kampdæk" loading="lazy"><figcaption>Hjemmesektor med radar, kampdæk og beskeder fra Astra</figcaption></figure>
+      <figure class="zoom"><img src="billeder/skaerm_combat.webp" alt="Kamp med målsøgning" loading="lazy"><figcaption>Kamp med målsøgning og auto-fire</figcaption></figure>
+      <figure class="zoom"><img src="billeder/skaerm_combat2.webp" alt="Luminar Solaris i kamp" loading="lazy"><figcaption>Luminar Solaris i kamp</figcaption></figure>
+      <figure class="zoom"><img src="billeder/skaerm_mining.webp" alt="Mining med Atlas Runner" loading="lazy"><figcaption>Mining af Crystal Shards med Atlas Runner</figcaption></figure>
+    </div>
+    <h3 class="gh">På stationen</h3>
+    <div class="gal">
+      <figure class="zoom"><img src="billeder/skaerm_missions.webp" alt="Kontraktbord" loading="lazy"><figcaption>Kontraktbord med missioner</figcaption></figure>
+      <figure class="zoom"><img src="billeder/skaerm_hangar.webp" alt="Skibsværft" loading="lazy"><figcaption>Skibsværft med 16 skrog og 3D-visning</figcaption></figure>
+      <figure class="zoom"><img src="billeder/skaerm_shop.webp" alt="Butik" loading="lazy"><figcaption>Butik med laser- og raketammunition</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="imperier" class="band" style="--bgi:url(billeder/blackhole.webp)">
     <h2>Fem menneskelige imperier</h2>
     <p class="sub">Du vælger dit imperium, når du starter. Hvert har sin egen historie, sit eget skib og sine egne styrker.</p>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
-      <div class="feat poster"><img src="billeder/terran.webp" alt="Plakat for Terran" loading="lazy"><div><h3>Terran</h3><p class="rt">Industrial Commonwealth</p><p>En nøgtern menneskelig civilisation drevet af industri, logistik, handel, minedrift og enorm infrastruktur. Arbejdere, selskaber, militær og administratorer holder maskinen kørende.</p><p class="st">Industriel logistik · Robust infrastruktur · Balancerede flåder</p><p class="mo">Civilization doesn't deliver itself.</p></div></div>
-      <div class="feat poster"><img src="billeder/vyrak.webp" alt="Plakat for Vyrak" loading="lazy"><div><h3>Vyrak</h3><p class="rt">Verdant Compact</p><p>En menneskelig civilisation viet til fred, velstand og terraforming. De mener, at nogen må gøre galaksen værd at leve i.</p><p class="st">Terraforming · Hurtig reparation · Langsigtet ekspansion</p><p class="mo">Someone has to fix the planets.</p></div></div>
-      <div class="feat poster"><img src="billeder/nerathi.webp" alt="Plakat for Nerathi" loading="lazy"><div><h3>Nerathi</h3><p class="rt">Celestial Concord</p><p>Forskere og opdagelsesrejsende, der tror, at universets struktur og anomalier kan afsløre en højere intelligens. Hver opdagelse er både bevis og tilbedelse.</p><p class="st">Videnskabelig opdagelse · Høj manøvredygtighed · Avancerede skjolde</p><p class="mo">Evidence is a form of worship.</p></div></div>
-      <div class="feat poster"><img src="billeder/auralith.webp" alt="Plakat for Auralith" loading="lazy"><div><h3>Auralith</h3><p class="rt">Eternal Crown</p><p>Et gammelt monarki, hvis kongelige elite lever ekstremt længe eller er ægte udødelige. Det samme hof har styret i århundreder ad gangen.</p><p class="st">Kongelig kontinuitet · Stråleskade · Prismatiske forsvar</p><p class="mo">The throne is forever. You are replaceable.</p></div></div>
-      <div class="feat poster"><img src="billeder/drakthar.webp" alt="Plakat for Drakthar" loading="lazy"><div><h3>Drakthar</h3><p class="rt">War Dominion</p><p>Den mest militaristiske af de fem civilisationer. Styrke, disciplin og sejr er alt; fred er blot pausen mellem krigene.</p><p class="st">Tunge skrog · Militær disciplin · Hårde modangreb</p><p class="mo">War is our peace treaty.</p></div></div>
+      <div class="feat poster" style="--c:#ff8a2a"><img src="billeder/terran.webp" alt="Plakat for Terran" loading="lazy"><div><h3>Terran</h3><p class="rt">Industrial Commonwealth</p><p>En nøgtern menneskelig civilisation drevet af industri, logistik, handel, minedrift og enorm infrastruktur. Arbejdere, selskaber, militær og administratorer holder maskinen kørende.</p><p class="st">Industriel logistik · Robust infrastruktur · Balancerede flåder</p><p class="mo">Civilization doesn't deliver itself.</p></div></div>
+      <div class="feat poster" style="--c:#4fcf7a"><img src="billeder/vyrak.webp" alt="Plakat for Vyrak" loading="lazy"><div><h3>Vyrak</h3><p class="rt">Verdant Compact</p><p>En menneskelig civilisation viet til fred, velstand og terraforming. De mener, at nogen må gøre galaksen værd at leve i.</p><p class="st">Terraforming · Hurtig reparation · Langsigtet ekspansion</p><p class="mo">Someone has to fix the planets.</p></div></div>
+      <div class="feat poster" style="--c:#6aa8ff"><img src="billeder/nerathi.webp" alt="Plakat for Nerathi" loading="lazy"><div><h3>Nerathi</h3><p class="rt">Celestial Concord</p><p>Forskere og opdagelsesrejsende, der tror, at universets struktur og anomalier kan afsløre en højere intelligens. Hver opdagelse er både bevis og tilbedelse.</p><p class="st">Videnskabelig opdagelse · Høj manøvredygtighed · Avancerede skjolde</p><p class="mo">Evidence is a form of worship.</p></div></div>
+      <div class="feat poster" style="--c:#f0c75e"><img src="billeder/auralith.webp" alt="Plakat for Auralith" loading="lazy"><div><h3>Auralith</h3><p class="rt">Eternal Crown</p><p>Et gammelt monarki, hvis kongelige elite lever ekstremt længe eller er ægte udødelige. Det samme hof har styret i århundreder ad gangen.</p><p class="st">Kongelig kontinuitet · Stråleskade · Prismatiske forsvar</p><p class="mo">The throne is forever. You are replaceable.</p></div></div>
+      <div class="feat poster" style="--c:#ff4a3d"><img src="billeder/drakthar.webp" alt="Plakat for Drakthar" loading="lazy"><div><h3>Drakthar</h3><p class="rt">War Dominion</p><p>Den mest militaristiske af de fem civilisationer. Styrke, disciplin og sejr er alt; fred er blot pausen mellem krigene.</p><p class="st">Tunge skrog · Militær disciplin · Hårde modangreb</p><p class="mo">War is our peace treaty.</p></div></div>
     </div>
   </section>
 
@@ -190,7 +227,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </div>
   </section>
 
-  <section id="download">
+  <section id="download" class="band" style="--bgi:url(billeder/pulsar.webp)">
     <h2>Download kommer snart</h2>
     <p class="sub">Embers of Quinary er stadig under udvikling og er ikke klar til download endnu. Når den første version er færdig, kan du hente den her, helt gratis.</p>
     <div class="dl">
@@ -226,5 +263,11 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <span><a href="#">Kontakt</a> · <a href="#">Musik-credits</a></span>
   </footer>
 </div>
+<dialog id="lb"><img alt=""></dialog>
+<script>
+const d=document.getElementById('lb'),im=d.querySelector('img');
+document.querySelectorAll('.zoom img').forEach(m=>m.addEventListener('click',()=>{im.src=m.src;im.alt=m.alt;d.showModal()}));
+d.addEventListener('click',()=>d.close());
+</script>
 </body>
 </html>
