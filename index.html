@@ -6,7 +6,7 @@
 <meta property="og:image" content="billeder/icon.webp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Embers of Quinary – Singleplayer rumspil</title>
-<meta name="description" content="Embers of Quinary er et singleplayer action-rumspil. Vælg imperium, flyv og kæmp mod Nullborn. Download gratis.">
+<meta name="description" content="Embers of Quinary er et singleplayer action-rumspil. Vælg imperium, flyv og kæmp mod Nullborn. Kommer snart.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
@@ -53,6 +53,7 @@ h1{font:700 clamp(44px,7vw,84px)/1 var(--head);letter-spacing:-.01em}
 .btn{display:inline-block;padding:15px 28px;border-radius:4px;font:700 17px var(--head);text-decoration:none;
   clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:transform .15s}
 .btn:hover{transform:translateY(-2px)}
+span.btn{cursor:default;opacity:.7}span.btn:hover{transform:none}
 .primary{background:var(--amber);color:#1b1100}
 .ghost{background:var(--panel);color:var(--text)}
 .small{margin-top:14px;font-size:14px;color:var(--muted)}
@@ -130,8 +131,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <li><a href="#spil">Om spillet</a></li>
       <li><a href="#imperier">Imperier</a></li>
       <li><a href="#galleri">Missioner</a></li>
-      <li><a href="#trailer">Trailer</a></li>
-      <li><a href="#download">Download</a></li>
+            <li><a href="#download">Download</a></li>
     </ul>
   </nav>
 
@@ -140,10 +140,10 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
       <h1>Fem imperier. Én fælles fjende.</h1>
       <p class="lead">Embers of Quinary er et top-down action-rumspil for én spiller. Vælg dit imperium, opgrader dit skib, rejs gennem jumpgates og stå imod Nullborn.</p>
       <div class="btns">
-        <a class="btn primary" href="#download">Download gratis</a>
-        <a class="btn ghost" href="#trailer">Se trailer</a>
+        <a class="btn primary" href="#download">Kommer snart</a>
+        <a class="btn ghost" href="#imperier">Se imperierne</a>
       </div>
-      <p class="small">Singleplayer · Gratis · Windows og Linux</p>
+      <p class="small">Singleplayer · Gratis · Under udvikling</p>
     </div>
     <img class="icon" src="billeder/icon.webp" alt="Embers of Quinary ikon: et sort rumskib omgivet af fem stjerner">
   </header>
@@ -190,32 +190,24 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     </div>
   </section>
 
-  <section id="trailer">
-    <h2>Trailer</h2>
-    <p class="sub">Se Embers of Quinary i aktion på under to minutter.</p>
-    <!-- Udskift VIDEO_ID med id'et fra dit YouTube-link -->
-    <iframe class="video" src="https://www.youtube.com/embed/VIDEO_ID" title="Embers of Quinary trailer" allowfullscreen loading="lazy"></iframe>
-  </section>
-
   <section id="download">
-    <h2>Download Embers of Quinary</h2>
-    <p class="sub">Vælg din platform, hent filen og følg installationen.</p>
+    <h2>Download kommer snart</h2>
+    <p class="sub">Embers of Quinary er stadig under udvikling og er ikke klar til download endnu. Når den første version er færdig, kan du hente den her, helt gratis.</p>
     <div class="dl">
       <div class="card">
         <h3>Windows</h3>
-        <p>Pak zip-filen ud og start spillet. Windows kan vise en advarsel, fordi spillet ikke er signeret.</p>
-        <!-- Udskift href med dit rigtige download-link (se vejledning) -->
-        <a class="btn primary" href="#" download>Hent til Windows (.zip)</a>
+        <p>Planlagt til første udgivelse.</p>
+        <span class="btn ghost" aria-disabled="true">Kommer snart</span>
       </div>
       <div class="card">
         <h3>Linux</h3>
-        <p>Pak filen ud, gør den kørbar og start den. Virker også på Steam Deck og Bazzite.</p>
-        <a class="btn primary" href="#" download>Hent til Linux (.zip)</a>
+        <p>Planlagt til første udgivelse.</p>
+        <span class="btn ghost" aria-disabled="true">Kommer snart</span>
       </div>
       <div class="card">
         <h3>Mac</h3>
-        <p>Kommer måske senere. Hold øje med siden.</p>
-        <a class="btn ghost" href="#">Ikke tilgængelig endnu</a>
+        <p>Måske senere.</p>
+        <span class="btn ghost" aria-disabled="true">Ikke planlagt endnu</span>
       </div>
     </div>
     <table>
