@@ -138,6 +138,11 @@ dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;disp
 .topbg{animation:slow 40s ease-in-out infinite alternate;background-size:115%!important}
 @keyframes slow{to{background-position:center 30%}}
 @media (prefers-reduced-motion:reduce){.topbg{animation:none}}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px}
+.tabs button{font:700 16px var(--head);color:var(--muted);background:var(--panel);border:1px solid var(--line);padding:10px 20px;cursor:pointer;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%)}
+.tabs button.on{background:var(--amber);color:#1b1100;border-color:var(--amber)}
+.gal[hidden]{display:none}
+.icon{border-radius:0!important;box-shadow:none!important;filter:drop-shadow(0 0 40px #ff7a2a66)}
 </style>
 </head>
 <body>
@@ -183,19 +188,13 @@ dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;disp
 
   <section id="skaerm">
     <h2>Fra spillet</h2>
-    <p class="sub">Rigtige skærmbilleder. Klik på et billede for at se det stort.</p>
-    <div class="gal">
-      <figure class="zoom big"><img src="billeder/skaerm_hud.webp" alt="Nerathi-hjemmesektor med radar og kampdæk" loading="lazy"><figcaption>Hjemmesektor med radar, kampdæk og beskeder fra Astra</figcaption></figure>
-      <figure class="zoom"><img src="billeder/skaerm_combat.webp" alt="Kamp med målsøgning" loading="lazy"><figcaption>Kamp med målsøgning og auto-fire</figcaption></figure>
-      <figure class="zoom"><img src="billeder/skaerm_combat2.webp" alt="Luminar Solaris i kamp" loading="lazy"><figcaption>Luminar Solaris i kamp</figcaption></figure>
-      <figure class="zoom"><img src="billeder/skaerm_mining.webp" alt="Mining med Atlas Runner" loading="lazy"><figcaption>Mining af Crystal Shards med Atlas Runner</figcaption></figure>
-    </div>
-    <h3 class="gh">På stationen</h3>
-    <div class="gal">
-      <figure class="zoom"><img src="billeder/skaerm_missions.webp" alt="Kontraktbord" loading="lazy"><figcaption>Kontraktbord med missioner</figcaption></figure>
-      <figure class="zoom"><img src="billeder/skaerm_hangar.webp" alt="Skibsværft" loading="lazy"><figcaption>Skibsværft med 16 skrog og 3D-visning</figcaption></figure>
-      <figure class="zoom"><img src="billeder/skaerm_shop.webp" alt="Butik" loading="lazy"><figcaption>Butik med laser- og raketammunition</figcaption></figure>
-    </div>
+    <p class="sub">Alle billeder er optaget i selve spillet. Klik på et billede for at se det stort.</p>
+    <div class="gal"><figure class="zoom big"><img src="billeder/skaerm_hud.webp" alt="Spillets brugerflade i kamp" loading="lazy"><figcaption>Kamp i hjemmesektoren med det nye kampdæk</figcaption></figure></div>
+    <div class="tabs" role="tablist"><button role="tab" data-t="kamp" class=on>Kamp</button><button role="tab" data-t="gate">Jumpgates</button><button role="tab" data-t="station">Stationer</button><button role="tab" data-t="menu">Menuer</button></div>
+    <div class="gal" id="t-kamp"><figure class="zoom"><img src="billeder/kamp_terran.webp" alt="Terran Nova i kamp" loading="lazy"><figcaption>Terran · Nova</figcaption></figure><figure class="zoom"><img src="billeder/kamp_vyrak.webp" alt="Vyrak Razorwake i kamp" loading="lazy"><figcaption>Vyrak · Razorwake</figcaption></figure><figure class="zoom"><img src="billeder/kamp_nerathi.webp" alt="Nerathi Noctis i kamp" loading="lazy"><figcaption>Nerathi · Noctis</figcaption></figure><figure class="zoom"><img src="billeder/kamp_auralith.webp" alt="Auralith Luminar Solaris i kamp" loading="lazy"><figcaption>Auralith · Luminar Solaris</figcaption></figure><figure class="zoom"><img src="billeder/kamp_drakthar.webp" alt="Drakthar Bastion Mk II i kamp" loading="lazy"><figcaption>Drakthar · Bastion Mk II</figcaption></figure></div>
+    <div class="gal" id="t-gate" hidden><figure class="zoom"><img src="billeder/gate_terran.webp" alt="Terran jumpgate" loading="lazy"><figcaption>Terran · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_vyrak.webp" alt="Vyrak jumpgate" loading="lazy"><figcaption>Vyrak · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_nerathi.webp" alt="Nerathi jumpgate" loading="lazy"><figcaption>Nerathi · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_auralith.webp" alt="Auralith jumpgate" loading="lazy"><figcaption>Auralith · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_drakthar.webp" alt="Drakthar jumpgate" loading="lazy"><figcaption>Drakthar · jumpgate</figcaption></figure></div>
+    <div class="gal" id="t-station" hidden><figure class="zoom"><img src="billeder/station_terran.webp" alt="Terran-station" loading="lazy"><figcaption>Terran · station</figcaption></figure><figure class="zoom"><img src="billeder/station_vyrak.webp" alt="Vyrak-station" loading="lazy"><figcaption>Vyrak · station</figcaption></figure><figure class="zoom"><img src="billeder/station_nerathi.webp" alt="Nerathi-station" loading="lazy"><figcaption>Nerathi · station</figcaption></figure><figure class="zoom"><img src="billeder/station_auralith.webp" alt="Auralith-station" loading="lazy"><figcaption>Auralith · station</figcaption></figure><figure class="zoom"><img src="billeder/station_drakthar.webp" alt="Drakthar-station" loading="lazy"><figcaption>Drakthar · station</figcaption></figure></div>
+    <div class="gal" id="t-menu" hidden><figure class="zoom"><img src="billeder/menu_missions.webp" alt="Kontraktbord" loading="lazy"><figcaption>Kontraktbord</figcaption></figure><figure class="zoom"><img src="billeder/menu_shop.webp" alt="Butik" loading="lazy"><figcaption>Butik</figcaption></figure><figure class="zoom"><img src="billeder/menu_hangar.webp" alt="Skibsværft" loading="lazy"><figcaption>Skibsværft</figcaption></figure><figure class="zoom"><img src="billeder/menu_loadout.webp" alt="Udrustning" loading="lazy"><figcaption>Udrustning</figcaption></figure><figure class="zoom"><img src="billeder/menu_map.webp" alt="Galaksekort" loading="lazy"><figcaption>Galaksekort</figcaption></figure><figure class="zoom"><img src="billeder/menu_diplomacy.webp" alt="Diplomati" loading="lazy"><figcaption>Diplomati</figcaption></figure></div>
   </section>
 
   <section id="imperier" class="band" style="--bgi:url(billeder/blackhole.webp)">
@@ -268,6 +267,9 @@ dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;disp
 const d=document.getElementById('lb'),im=d.querySelector('img');
 document.querySelectorAll('.zoom img').forEach(m=>m.addEventListener('click',()=>{im.src=m.src;im.alt=m.alt;d.showModal()}));
 d.addEventListener('click',()=>d.close());
+document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
+ document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
+ ['kamp','gate','station','menu'].forEach(t=>document.getElementById('t-'+t).hidden=t!==b.dataset.t)}));
 </script>
 </body>
 </html>
