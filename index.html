@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <link rel="icon" href="billeder/favicon.png">
 <meta property="og:image" content="billeder/icon.webp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Embers of Quinary – Singleplayer rumspil</title>
-<meta name="description" content="Embers of Quinary er et singleplayer action-rumspil. Vælg imperium, flyv og kæmp mod Nullborn. Kommer snart.">
+<title>Embers of Quinary – Singleplayer space action game</title>
+<meta name="description" content="Embers of Quinary is a free singleplayer top-down space action game. Choose your empire, upgrade your ship and stand against the Nullborn. Coming soon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Barlow:wght@400;500&display=swap" rel="stylesheet">
@@ -116,7 +116,7 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
 .poster p{color:var(--muted);font-size:15px;margin-top:2px}
 .mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
 .mgrid figure{margin:0;background:var(--panel)}
-.mgrid img{width:100%;display:block;aspect-ratio:2/1;object-fit:cover}
+.mgrid img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
 .mgrid figcaption{padding:12px 16px;font:700 19px var(--head)}
 .poster .rt{color:var(--amber);font-weight:500;margin:2px 0 8px}.poster .st{margin-top:10px;font-size:14px}.poster .mo{margin-top:10px;font-style:italic;color:var(--text);font-size:15px}
 body{overflow-x:hidden}
@@ -143,7 +143,11 @@ dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;disp
 .tabs button.on{background:var(--amber);color:#1b1100;border-color:var(--amber)}
 .gal[hidden]{display:none}
 .icon{border-radius:0!important;box-shadow:none!important;filter:drop-shadow(0 0 40px #ff7a2a66)}
-.poster h3{display:flex;align-items:center;gap:10px}.em{width:44px;height:44px;object-fit:contain}
+.hd{display:flex;align-items:center;gap:14px;margin-bottom:8px}.em{width:84px;height:84px;flex:none;object-fit:contain;filter:drop-shadow(0 0 10px #000a)}.nm{display:block}.nm .rt{margin-bottom:0}
+.poster{position:relative}
+.poster .em{position:absolute;top:12px;left:12px;width:84px;height:84px;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 2px 8px #000c)}
+.poster h3{display:block}
+.mgrid img{aspect-ratio:16/9!important}
 </style>
 </head>
 <body>
@@ -153,124 +157,102 @@ dialog::backdrop{background:#000d}dialog img{max-width:96vw;max-height:94vh;disp
   <nav>
     <a class="logo" href="#">EMBERS <span>OF QUINARY</span></a>
     <ul>
-      <li><a href="#spil">Om spillet</a></li>
-      <li><a href="#skaerm">Skærmbilleder</a></li>
-      <li><a href="#imperier">Imperier</a></li>
-      <li><a href="#galleri">Missioner</a></li>
-            <li><a href="#download">Download</a></li>
+      <li><a href="#spil">The game</a></li>
+      <li><a href="#imperier">Empires</a></li>
+      <li><a href="#galleri">Missions</a></li>
+      <li><a href="#download">Download</a></li>
     </ul>
   </nav>
 
   <header class="hero">
     <div>
-      <h1>Fem imperier. Én fælles fjende.</h1>
-      <p class="lead">Embers of Quinary er et top-down action-rumspil for én spiller. Vælg dit imperium, opgrader dit skib, rejs gennem jumpgates og stå imod Nullborn.</p>
+      <h1>Five empires. One common enemy.</h1>
+      <p class="lead">Embers of Quinary is a top-down space action game for one player. Choose your empire, upgrade your ship, travel through jumpgates and stand against the Nullborn.</p>
       <div class="btns">
-        <a class="btn primary" href="#download">Kommer snart</a>
-        <a class="btn ghost" href="#imperier">Se imperierne</a>
+        <a class="btn primary" href="#download">Coming soon</a>
+        <a class="btn ghost" href="#imperier">Meet the empires</a>
       </div>
-      <p class="small">Singleplayer · Gratis · Under udvikling</p>
+      <p class="small">Singleplayer · Free · In development</p>
     </div>
-    <img class="icon" src="billeder/icon.webp" alt="Embers of Quinary ikon: et sort rumskib omgivet af fem stjerner">
+    <img class="icon" src="billeder/icon.webp" alt="Embers of Quinary emblem: a dark starship surrounded by five empire symbols">
   </header>
 </div></div>
 
 <main class="wrap">
   <section id="spil">
-    <h2>Det kan du i Embers of Quinary</h2>
-    <p class="sub">En kampagne med historie, kampe i store baner og et skib, du selv bygger videre på.</p>
+    <h2>What you can do in Embers of Quinary</h2>
+    <p class="sub">A story-driven campaign, battles in large open arenas and a ship you keep building on.</p>
     <div class="grid">
-      <div class="feat fx" style="--bgi:url(billeder/fx_kamp.webp)"><h3>Kampagne med historie</h3><p>Scriptede missioner, nødsignaler og baghold. Nullborn er den fælles fjende, og de bliver farligere, jo længere du kommer.</p></div>
-      <div class="feat fx" style="--bgi:url(billeder/fx_opgrader.webp)"><h3>Opgrader dit skib</h3><p>Vælg mellem skibe med egne roller og våben, og lås flere op undervejs.</p></div>
-      <div class="feat fx" style="--bgi:url(billeder/fx_udforsk.webp)"><h3>Udforsk og tjen penge</h3><p>Rejs mellem sektorer via jumpgates, mine asteroider og tag missioner på stationerne.</p></div>
-      <div class="feat fx" style="--bgi:url(billeder/pulsar.webp)"><h3>Spil alene</h3><p>Ingen konto og ingen internetforbindelse. Gem på din hjemmestation og fortsæt senere.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_kamp.webp)"><h3>Story campaign</h3><p>Scripted missions, distress signals and ambushes. The Nullborn are the common enemy, and they grow more dangerous the further you get.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_opgrader.webp)"><h3>Upgrade your ship</h3><p>Choose between ships with their own roles and weapons, and unlock more along the way.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/fx_udforsk.webp)"><h3>Explore and earn</h3><p>Travel between sectors through jumpgates, mine asteroids and take missions at the stations.</p></div>
+      <div class="feat fx" style="--bgi:url(billeder/pulsar.webp)"><h3>Play solo</h3><p>No account and no internet connection needed. Save at your home station and continue later.</p></div>
     </div>
   </section>
 
-  <section id="skaerm">
-    <h2>Fra spillet</h2>
-    <p class="sub">Alle billeder er optaget i selve spillet. Klik på et billede for at se det stort.</p>
-    <div class="gal"><figure class="zoom big"><img src="billeder/skaerm_hud.webp" alt="Spillets brugerflade i kamp" loading="lazy"><figcaption>Kamp i hjemmesektoren med det nye kampdæk</figcaption></figure></div>
-    <div class="tabs" role="tablist"><button role="tab" data-t="kamp" class=on>Kamp</button><button role="tab" data-t="gate">Jumpgates</button><button role="tab" data-t="station">Stationer</button><button role="tab" data-t="menu">Menuer</button></div>
-    <div class="gal" id="t-kamp"><figure class="zoom"><img src="billeder/kamp_terran.webp" alt="Terran Nova i kamp" loading="lazy"><figcaption>Terran · Nova</figcaption></figure><figure class="zoom"><img src="billeder/kamp_vyrak.webp" alt="Vyrak Razorwake i kamp" loading="lazy"><figcaption>Vyrak · Razorwake</figcaption></figure><figure class="zoom"><img src="billeder/kamp_nerathi.webp" alt="Nerathi Noctis i kamp" loading="lazy"><figcaption>Nerathi · Noctis</figcaption></figure><figure class="zoom"><img src="billeder/kamp_auralith.webp" alt="Auralith Luminar Solaris i kamp" loading="lazy"><figcaption>Auralith · Luminar Solaris</figcaption></figure><figure class="zoom"><img src="billeder/kamp_drakthar.webp" alt="Drakthar Bastion Mk II i kamp" loading="lazy"><figcaption>Drakthar · Bastion Mk II</figcaption></figure></div>
-    <div class="gal" id="t-gate" hidden><figure class="zoom"><img src="billeder/gate_terran.webp" alt="Terran jumpgate" loading="lazy"><figcaption>Terran · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_vyrak.webp" alt="Vyrak jumpgate" loading="lazy"><figcaption>Vyrak · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_nerathi.webp" alt="Nerathi jumpgate" loading="lazy"><figcaption>Nerathi · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_auralith.webp" alt="Auralith jumpgate" loading="lazy"><figcaption>Auralith · jumpgate</figcaption></figure><figure class="zoom"><img src="billeder/gate_drakthar.webp" alt="Drakthar jumpgate" loading="lazy"><figcaption>Drakthar · jumpgate</figcaption></figure></div>
-    <div class="gal" id="t-station" hidden><figure class="zoom"><img src="billeder/station_terran.webp" alt="Terran-station" loading="lazy"><figcaption>Terran · station</figcaption></figure><figure class="zoom"><img src="billeder/station_vyrak.webp" alt="Vyrak-station" loading="lazy"><figcaption>Vyrak · station</figcaption></figure><figure class="zoom"><img src="billeder/station_nerathi.webp" alt="Nerathi-station" loading="lazy"><figcaption>Nerathi · station</figcaption></figure><figure class="zoom"><img src="billeder/station_auralith.webp" alt="Auralith-station" loading="lazy"><figcaption>Auralith · station</figcaption></figure><figure class="zoom"><img src="billeder/station_drakthar.webp" alt="Drakthar-station" loading="lazy"><figcaption>Drakthar · station</figcaption></figure></div>
-    <div class="gal" id="t-menu" hidden><figure class="zoom"><img src="billeder/menu_missions.webp" alt="Kontraktbord" loading="lazy"><figcaption>Kontraktbord</figcaption></figure><figure class="zoom"><img src="billeder/menu_shop.webp" alt="Butik" loading="lazy"><figcaption>Butik</figcaption></figure><figure class="zoom"><img src="billeder/menu_hangar.webp" alt="Skibsværft" loading="lazy"><figcaption>Skibsværft</figcaption></figure><figure class="zoom"><img src="billeder/menu_loadout.webp" alt="Udrustning" loading="lazy"><figcaption>Udrustning</figcaption></figure><figure class="zoom"><img src="billeder/menu_map.webp" alt="Galaksekort" loading="lazy"><figcaption>Galaksekort</figcaption></figure><figure class="zoom"><img src="billeder/menu_diplomacy.webp" alt="Diplomati" loading="lazy"><figcaption>Diplomati</figcaption></figure></div>
-  </section>
-
   <section id="imperier" class="band" style="--bgi:url(billeder/blackhole.webp)">
-    <h2>Fem menneskelige imperier</h2>
-    <p class="sub">Du vælger dit imperium, når du starter. Hvert har sin egen historie, sit eget skib og sine egne styrker.</p>
+    <h2>Five human empires</h2>
+    <p class="sub">You choose your empire when you start. Each has its own history, its own ship and its own strengths.</p>
     <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(250px,1fr))">
-      <div class="feat poster" style="--c:#ff8a2a"><img src="billeder/terran.webp" alt="Plakat for Terran" loading="lazy"><div><h3><img class="em" src="billeder/emblem_terran.webp" alt="" width="44" height="44">Terran</h3><p class="rt">Industrial Commonwealth</p><p>En nøgtern menneskelig civilisation drevet af industri, logistik, handel, minedrift og enorm infrastruktur. Arbejdere, selskaber, militær og administratorer holder maskinen kørende.</p><p class="st">Industriel logistik · Robust infrastruktur · Balancerede flåder</p><p class="mo">Civilization doesn't deliver itself.</p></div></div>
-      <div class="feat poster" style="--c:#4fcf7a"><img src="billeder/vyrak.webp" alt="Plakat for Vyrak" loading="lazy"><div><h3><img class="em" src="billeder/emblem_vyrak.webp" alt="" width="44" height="44">Vyrak</h3><p class="rt">Verdant Compact</p><p>En menneskelig civilisation viet til fred, velstand og terraforming. De mener, at nogen må gøre galaksen værd at leve i.</p><p class="st">Terraforming · Hurtig reparation · Langsigtet ekspansion</p><p class="mo">Someone has to fix the planets.</p></div></div>
-      <div class="feat poster" style="--c:#6aa8ff"><img src="billeder/nerathi.webp" alt="Plakat for Nerathi" loading="lazy"><div><h3><img class="em" src="billeder/emblem_nerathi.webp" alt="" width="44" height="44">Nerathi</h3><p class="rt">Celestial Concord</p><p>Forskere og opdagelsesrejsende, der tror, at universets struktur og anomalier kan afsløre en højere intelligens. Hver opdagelse er både bevis og tilbedelse.</p><p class="st">Videnskabelig opdagelse · Høj manøvredygtighed · Avancerede skjolde</p><p class="mo">Evidence is a form of worship.</p></div></div>
-      <div class="feat poster" style="--c:#f0c75e"><img src="billeder/auralith.webp" alt="Plakat for Auralith" loading="lazy"><div><h3><img class="em" src="billeder/emblem_auralith.webp" alt="" width="44" height="44">Auralith</h3><p class="rt">Eternal Crown</p><p>Et gammelt monarki, hvis kongelige elite lever ekstremt længe eller er ægte udødelige. Det samme hof har styret i århundreder ad gangen.</p><p class="st">Kongelig kontinuitet · Stråleskade · Prismatiske forsvar</p><p class="mo">The throne is forever. You are replaceable.</p></div></div>
-      <div class="feat poster" style="--c:#ff4a3d"><img src="billeder/drakthar.webp" alt="Plakat for Drakthar" loading="lazy"><div><h3><img class="em" src="billeder/emblem_drakthar.webp" alt="" width="44" height="44">Drakthar</h3><p class="rt">War Dominion</p><p>Den mest militaristiske af de fem civilisationer. Styrke, disciplin og sejr er alt; fred er blot pausen mellem krigene.</p><p class="st">Tunge skrog · Militær disciplin · Hårde modangreb</p><p class="mo">War is our peace treaty.</p></div></div>
+      <div class="feat poster" style="--c:#ff8a2a"><img src="billeder/terran.webp" alt="Terran recruitment poster" loading="lazy"><img class="em" src="billeder/emblem_terran.webp" alt="Terran emblem" width="84" height="84"><div><h3>Terran</h3><p class="rt">Industrial Commonwealth</p><p>A pragmatic human civilization powered by industry, logistics, trade, mining, and immense infrastructure. Workers, corporations, armed forces, and administrators keep the galactic machine running.</p><p class="st">Industrial logistics · Resilient infrastructure · Balanced fleets</p><p class="mo">Civilization doesn’t deliver itself.</p></div></div>
+      <div class="feat poster" style="--c:#4fcf7a"><img src="billeder/vyrak.webp" alt="Vyrak recruitment poster" loading="lazy"><img class="em" src="billeder/emblem_vyrak.webp" alt="Vyrak emblem" width="84" height="84"><div><h3>Vyrak</h3><p class="rt">Verdant Compact</p><p>A human civilization devoted to peace, prosperity, terraforming, and the patient work of making hostile worlds habitable. They believe someone must make the galaxy worth living in.</p><p class="st">Terraforming expertise · Rapid recovery · Long-term expansion</p><p class="mo">Someone has to fix the planets.</p></div></div>
+      <div class="feat poster" style="--c:#6aa8ff"><img src="billeder/nerathi.webp" alt="Nerathi recruitment poster" loading="lazy"><img class="em" src="billeder/emblem_nerathi.webp" alt="Nerathi emblem" width="84" height="84"><div><h3>Nerathi</h3><p class="rt">Celestial Concord</p><p>Human explorers and scientists who believe the universe’s structure, anomalies, and unknown phenomena may reveal a higher intelligence. For the Nerathi, every discovery is both evidence and devotion.</p><p class="st">Scientific discovery · High mobility · Advanced shields</p><p class="mo">Evidence is a form of worship.</p></div></div>
+      <div class="feat poster" style="--c:#f0c75e"><img src="billeder/auralith.webp" alt="Auralith recruitment poster" loading="lazy"><img class="em" src="billeder/emblem_auralith.webp" alt="Auralith emblem" width="84" height="84"><div><h3>Auralith</h3><p class="rt">Eternal Crown</p><p>An ancient human monarchy whose royal elite possess extreme longevity or true immortality. Its beautiful, cultivated society is ruled by the same tightly controlled court for centuries at a time.</p><p class="st">Royal continuity · Beam damage · Prismatic defenses</p><p class="mo">The throne is forever. You are replaceable.</p></div></div>
+      <div class="feat poster" style="--c:#ff4a3d"><img src="billeder/drakthar.webp" alt="Drakthar recruitment poster" loading="lazy"><img class="em" src="billeder/emblem_drakthar.webp" alt="Drakthar emblem" width="84" height="84"><div><h3>Drakthar</h3><p class="rt">War Dominion</p><p>The most militaristic of the five human civilizations. Drakthar society is built around strength, discipline, victory, and martial honor; peace is merely the interval between wars.</p><p class="st">Heavy hulls · Military discipline · Punishing counterattacks</p><p class="mo">War is our peace treaty.</p></div></div>
     </div>
   </section>
 
   <section id="galleri">
-    <h2>Ni slags missioner</h2>
-    <p class="sub">Fra patruljer og minedrift til fronten mod Nullborn. Der er altid noget at tage fat på.</p>
-    <!-- Tilføj rigtige skærmbilleder her: <figure><img src="billeder/skaerm1.webp" alt="..."></figure> -->
+    <h2>Nine mission types</h2>
+    <p class="sub">From patrols and mining to the front line against the Nullborn. There is always something to do.</p>
     <div class="mgrid">
-      <figure><img src="billeder/mission_warfront.webp" alt="Missionstype Warfront" loading="lazy"><figcaption>Warfront</figcaption></figure>
-      <figure><img src="billeder/mission_exploration.webp" alt="Missionstype Exploration" loading="lazy"><figcaption>Exploration</figcaption></figure>
-      <figure><img src="billeder/mission_salvage.webp" alt="Missionstype Salvage" loading="lazy"><figcaption>Salvage</figcaption></figure>
-      <figure><img src="billeder/mission_delivery.webp" alt="Missionstype Delivery" loading="lazy"><figcaption>Delivery</figcaption></figure>
-      <figure><img src="billeder/mission_defense.webp" alt="Missionstype Defense" loading="lazy"><figcaption>Defense</figcaption></figure>
-      <figure><img src="billeder/mission_patrol.webp" alt="Missionstype Patrol" loading="lazy"><figcaption>Patrol</figcaption></figure>
-      <figure><img src="billeder/mission_mining.webp" alt="Missionstype Mining" loading="lazy"><figcaption>Mining</figcaption></figure>
-      <figure><img src="billeder/mission_intercept.webp" alt="Missionstype Intercept" loading="lazy"><figcaption>Intercept</figcaption></figure>
-      <figure><img src="billeder/mission_combat.webp" alt="Missionstype Combat" loading="lazy"><figcaption>Combat</figcaption></figure>
+      <figure><img src="billeder/mission_warfront.webp" alt="Mission type Warfront" loading="lazy"><figcaption>Warfront</figcaption></figure>
+      <figure><img src="billeder/mission_exploration.webp" alt="Mission type Exploration" loading="lazy"><figcaption>Exploration</figcaption></figure>
+      <figure><img src="billeder/mission_salvage.webp" alt="Mission type Salvage" loading="lazy"><figcaption>Salvage</figcaption></figure>
+      <figure><img src="billeder/mission_delivery.webp" alt="Mission type Delivery" loading="lazy"><figcaption>Delivery</figcaption></figure>
+      <figure><img src="billeder/mission_defense.webp" alt="Mission type Defense" loading="lazy"><figcaption>Defense</figcaption></figure>
+      <figure><img src="billeder/mission_patrol.webp" alt="Mission type Patrol" loading="lazy"><figcaption>Patrol</figcaption></figure>
+      <figure><img src="billeder/mission_mining.webp" alt="Mission type Mining" loading="lazy"><figcaption>Mining</figcaption></figure>
+      <figure><img src="billeder/mission_intercept.webp" alt="Mission type Intercept" loading="lazy"><figcaption>Intercept</figcaption></figure>
+      <figure><img src="billeder/mission_combat.webp" alt="Mission type Combat" loading="lazy"><figcaption>Combat</figcaption></figure>
     </div>
   </section>
 
   <section id="download" class="band" style="--bgi:url(billeder/pulsar.webp)">
-    <h2>Download kommer snart</h2>
-    <p class="sub">Embers of Quinary er stadig under udvikling og er ikke klar til download endnu. Når den første version er færdig, kan du hente den her, helt gratis.</p>
+    <h2>Download coming soon</h2>
+    <p class="sub">Embers of Quinary is still in development and not ready to download yet. When the first version is finished, you will be able to get it here, completely free.</p>
     <div class="dl">
       <div class="card">
         <h3>Windows</h3>
-        <p>Planlagt til første udgivelse.</p>
-        <span class="btn ghost" aria-disabled="true">Kommer snart</span>
+        <p>Planned for the first release.</p>
+        <span class="btn ghost" aria-disabled="true">Coming soon</span>
       </div>
       <div class="card">
         <h3>Linux</h3>
-        <p>Planlagt til første udgivelse.</p>
-        <span class="btn ghost" aria-disabled="true">Kommer snart</span>
+        <p>Planned for the first release.</p>
+        <span class="btn ghost" aria-disabled="true">Coming soon</span>
       </div>
       <div class="card">
         <h3>Mac</h3>
-        <p>Måske senere.</p>
-        <span class="btn ghost" aria-disabled="true">Ikke planlagt endnu</span>
+        <p>Maybe later.</p>
+        <span class="btn ghost" aria-disabled="true">Not planned yet</span>
       </div>
     </div>
     <table>
-      <tr><th>Flyv</th><td>Venstreklik, eller WASD / piletaster</td></tr>
-      <tr><th>Skyd</th><td>Højreklik eller mellemrum</td></tr>
-      <tr><th>Mine</th><td>E ved nærmeste asteroide</td></tr>
-      <tr><th>Station / jumpgate</th><td>F, når du er tæt på</td></tr>
-      <tr><th>Verdenskort</th><td>M</td></tr>
+      <tr><th>Fly</th><td>Left click, or WASD / arrow keys</td></tr>
+      <tr><th>Fire</th><td>Right click or Space</td></tr>
+      <tr><th>Mine</th><td>E near an asteroid</td></tr>
+      <tr><th>Dock / jumpgate</th><td>F when close</td></tr>
+      <tr><th>World map</th><td>M</td></tr>
     </table>
   </section>
 </main>
 
 <div class="wrap">
   <footer>
-    <span>© 2026 Embers of Quinary. Alle rettigheder forbeholdes.</span>
-    <span><a href="#">Kontakt</a> · <a href="#">Musik-credits</a></span>
+    <span>© 2026 Embers of Quinary. All rights reserved.</span>
+    <span><a href="#">Contact</a> · <a href="#">Music credits</a></span>
   </footer>
 </div>
-<dialog id="lb"><img alt=""></dialog>
-<script>
-const d=document.getElementById('lb'),im=d.querySelector('img');
-document.querySelectorAll('.zoom img').forEach(m=>m.addEventListener('click',()=>{im.src=m.src;im.alt=m.alt;d.showModal()}));
-d.addEventListener('click',()=>d.close());
-document.querySelectorAll('.tabs button').forEach(b=>b.addEventListener('click',()=>{
- document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));
- ['kamp','gate','station','menu'].forEach(t=>document.getElementById('t-'+t).hidden=t!==b.dataset.t)}));
-</script>
 </body>
 </html>
